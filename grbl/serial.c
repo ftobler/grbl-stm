@@ -176,7 +176,7 @@ void serial_write(uint8_t data) {
   #ifdef STM32F103C8
 #ifndef USEUSB
 	USART_SendData(USART1, data);
-	while (!(USART1->SR & USART_FLAG_TXE));		 //µÈ´ý·¢ËÍÍê³É
+	while (!(USART1->SR & USART_FLAG_TXE));		 //ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     return;
 #endif
 #endif
@@ -376,7 +376,7 @@ void USART1_IRQHandler (void)
             }
             break; 
           #ifdef DEBUG
-            case CMD_DEBUG_REPORT: {uint8_t sreg = SREG; cli(); bit_true(sys_rt_exec_debug,EXEC_DEBUG_REPORT); SREG = sreg;} break;
+            //case CMD_DEBUG_REPORT: {uint8_t sreg = SREG; cli(); bit_true(sys_rt_exec_debug,EXEC_DEBUG_REPORT); SREG = sreg;} break;
           #endif
           case CMD_FEED_OVR_RESET: system_set_exec_motion_override_flag(EXEC_FEED_OVR_RESET); break;
           case CMD_FEED_OVR_COARSE_PLUS: system_set_exec_motion_override_flag(EXEC_FEED_OVR_COARSE_PLUS); break;
