@@ -1,4 +1,8 @@
-this is my fork of usbcnc for STM32F103 
+# this is my fork of usbcnc for STM32F103
+
+[![cube_make build](https://github.com/ftobler/grbl-stm/actions/workflows/cube_make.yml/badge.svg)](https://github.com/ftobler/grbl-stm/actions/workflows/cube_make.yml) [![Makefile build](https://github.com/ftobler/grbl-stm/actions/workflows/make.yml/badge.svg)](https://github.com/ftobler/grbl-stm/actions/workflows/make.yml)
+
+
 New version is for my solution driver board + stm32f103 board 
 ![stm32f103 board](https://github.com/mirecta/grbl/blob/edge/doc/media/103board.jpg?raw=true)
 <br/><br/>Driver board<br/>
