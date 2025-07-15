@@ -1,0 +1,1 @@
+.cpu cortex-m3
