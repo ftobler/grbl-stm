@@ -4,5 +4,5 @@
 *.DS_Store
 *.d
 
-README.md
-/Debug/
+Debug/
+build/
