@@ -114,6 +114,7 @@ endif
 .PHONY: all flash grbl_src clean
 
 all:  $(OBJ)
+	@mkdir -p $(OUT_DIR)
 	$(X_CC) $(CFLAGS) $(LDFLAGS) $(OBJ) $(LIBS) -o $(OUT_DIR)/$(OUTPUT)
 	mv $(OUT_DIR)/$(OUTPUT) $(OUT_DIR)/$(OUTPUT).elf
 	$(X_OBJCOPY) -O binary $(OUT_DIR)/$(OUTPUT).elf $(OUT_DIR)/$(OUTPUT).bin
