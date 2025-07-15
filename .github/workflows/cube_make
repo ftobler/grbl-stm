@@ -1,0 +1,23 @@
+name: cube_make build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: remove default Makefile
+      run: rm -f Makefile
+
+    - name: Generate Makefile using action
+      uses: ftobler/cube_make@v1
+      with:
+        project_path: .
+
+    - name: Build using new Makefile
+      run: |
+        make
